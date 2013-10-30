@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MTB_Foundation_WebForms_Sample.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET with Zurb Foundation Application | My Tec Bits</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Styles.Render("~/bundles/foundationCss") %>
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <form runat="server">
+        <!-- Nav Bar -->
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="nav-bar right">
+                    <ul class="button-group">
+                        <li><a runat="server" href="#" class="button">Home</a></li>
+                        <li><a runat="server" href="~/About" class="button">About</a></li>
+                        <li><a runat="server" href="~/Contact" class="button">Contact</a></li>
+                        <li><a href="#" class="button">Link 4</a></li>
+                    </ul>
+                </div>
+                <h1>MyTecBits <small>My first Zurb Foundation.</small></h1>
+                <hr />
+            </div>
+        </div>
+
+        <!-- Main Page Content and Sidebar -->
+        <div class="row">
+            <!-- Main Blog Content -->
+            <div class="large-9 columns" role="content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- End Main Content -->
+
+            <!-- Sidebar -->
+            <aside class="large-3 columns">
+                <h5>Links</h5>
+                <ul class="side-nav">
+                    <li><a runat="server" href="~/Account/Register">Register</a></li>
+                    <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Fun</a></li>
+                    <li><a href="#">Weasels</a></li>
+                </ul>
+                <div class="panel">
+                    <h5>Featured</h5>
+                    <p>
+                        Hello World: This is my first web forms application with Zurb Foundation user interface framework.
+                    </p>
+                    <a href="#">Read More &rarr;</a>
+                </div>
+            </aside>
+            <!-- End Sidebar -->
+        </div>
+        <!-- End Main Content and Sidebar -->
+
+        <!-- Footer -->
+        <footer class="row">
+            <div class="large-12 columns">
+                <hr />
+                <div class="row">
+                    <div class="large-6 columns">
+                        <p>&copy; www.MyTecBits.com</p>
+                    </div>
+                    <div class="large-6 columns">
+                        <ul class="inline-list right">
+                            <li><a runat="server" href="#">Home</a></li>
+                            <li><a runat="server" href="~/About">About</a></li>
+                            <li><a runat="server" href="~/Contact">Contact</a></li>
+                            <li><a href="#">Link 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
